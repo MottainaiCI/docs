@@ -1,0 +1,14 @@
+site_name: 'Mottainai docs'
+site_description: 'Documentation for Mottainai'
+site_author: 'Mottainai'
+site_url: 'https://mottainaici.github.io/docs/'
+
+repo_name: 'MottainaiCI/docs'
+repo_url: https://github.com/MottainaiCI/docs
+
+pages:
+- Home: index.md
+- Projects:
+    - Documentation: projects/documentation.md
+
+theme: 'material'
