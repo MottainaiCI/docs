@@ -19,3 +19,6 @@ pages:
     - Documentation: projects/documentation.md
 
 theme: 'cinder'
+
+markdown_extensions:
+  - pymdownx.highlight

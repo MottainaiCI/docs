@@ -3,6 +3,7 @@ install:
 - pip install mkdocs
 - pip install mkdocs-material
 - pip install mkdocs-cinder
+- pip install pymdown-extensions
 script:
 - mkdocs build --verbose --clean --strict
 deploy:

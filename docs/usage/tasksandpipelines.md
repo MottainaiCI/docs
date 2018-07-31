@@ -2,12 +2,16 @@
 
 Tasks can be defined in both json or yaml, it boils down to:
 
-```yaml
-image: my/image # Image used by the task player
+```
+# Image used by the task player
+image: "my/image"
+
+# Script to be executed
 script:
-  - echo 'hello world'
-  - exit 0
-task: docker_execute # Task type, for now only docker is available
+  - echo "hello world"
+
+# Task type, for now only docker is available
+task: docker_execute
 ```
 
 Those are the required fields:
@@ -18,12 +22,15 @@ Those are the required fields:
 
 There are more field to allow you to control better the lifespan of the task, or further define the environment. This is a full task definition:
 
-```yaml
+```
+# Image used by the task player
+image: "my/image"
 
-# Basic ones
-image: my/image
+# Script to be executed
 script:
-  - echo 'Woot!'
+  - echo "hello world"
+
+# Task type, for now only docker is available
 task: docker_execute
 
 # Git repository that will be the context of our build
@@ -36,7 +43,8 @@ directory: '/dir/'
 
 # List of path to map inside the build environment from the host
 binds:
-- /dev/loop-control:/dev/loop-control
+  - /dev/loop-control:/dev/loop-control
+  - /test
 
 # Set to yes or any value to cache the image used to run the task, otherwise omit
 cache_image: "yes"
@@ -47,6 +55,7 @@ cache_clean: "yes"
 # Custom image entrypoint ( first executed binary, defaults to /bin/bash )
 entrypoint:
   - /bin/bash
+  - -c
 
 # List of variables in the build environment
 environment:
@@ -62,13 +71,13 @@ namespace: "staging:development"
 prune: "yes"
 
 # A specific queue where to send the task to.
-queue: 'amd64'
+queue: "amd64"
 
 # Task id where to drain artefacts from
-root_task: '34132345135151'
+root_task: "34132345135151"
 
 # Task associated storage
-storage: '8925468933589065900'
+storage: "8925468933589065900"
 
 # relative path for drained storages (defaults storage)
 storage_path: storage
@@ -98,7 +107,6 @@ Most notably, all optional fields:
 In order to automate furthermore your infrastructure, it's possible to define pipelines of tasks.
 Tasks can be chained together to e.g. pass-by artifacts between each other, and if one of them fails, the chain is interrupted.
 There are 3 kinds of pipelines: Groups, Chains and Chords.
-
 
 ## Groups
 
@@ -181,7 +189,6 @@ Execute a callback after a group ends successfully:
 ```yaml
 pipeline_name: "My Pipeline"
 
-# If all group is successfull, task3 is executed
 group:
   - "task1"
   - "task2"
@@ -198,7 +205,7 @@ tasks:
     image: sabayon/base-amd64
     script:
       - echo 'hello world!'
-      - exit 1 # If it fails, task3 is not executed
+      # - exit 1 If it fails, task3 is not executed
     task: docker_execute
   task3:
     image: sabayon/base-amd64
