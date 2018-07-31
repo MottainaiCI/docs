@@ -8,6 +8,13 @@ repo_url: https://github.com/MottainaiCI/docs
 
 pages:
 - Home: index.md
+- How it works: general.md
+- Usage:
+  - Cli: usage/cli.md
+  - Tasks and Pipelines: usage/tasksandpipelines.md
+  - Artefacts: usage/artefacts.md
+  - Namespaces: usage/namespace.md
+  - Storages: usage/storage.md
 - Projects:
     - Documentation: projects/documentation.md
 
