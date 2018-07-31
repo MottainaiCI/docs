@@ -2,12 +2,13 @@ language: python
 install:
 - pip install mkdocs
 - pip install mkdocs-material
+- pip install mkdocs-cinder
 script:
 - mkdocs build --verbose --clean --strict
 deploy:
  provider: pages
  skip_cleanup: true
- github_token: $GITHUB_TOKEN 
+ github_token: $GITHUB_TOKEN
  local_dir: site
  on:
    branch: master
