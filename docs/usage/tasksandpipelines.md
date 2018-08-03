@@ -88,6 +88,10 @@ artefact_path: artefacts
 # On success, tag task's produced artefacts into a namespace (create if doesn't exists)
 tag_namespace: staging:iso
 
+# Specify artefacts publishing mode on namespaces. by default it replace namespace content during tag.
+# - append: Do not replace namespace content, append to existing one
+publish_mode: "append"
+
 # Task time limit (in seconds)
 timeout: 0
 ```
