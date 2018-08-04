@@ -94,6 +94,9 @@ publish_mode: "append"
 
 # Task time limit (in seconds)
 timeout: 0
+
+# Retry attempts (in case of error)
+retry: 1
 ```
 
 Most notably, all optional fields:
