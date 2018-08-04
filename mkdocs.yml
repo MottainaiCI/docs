@@ -18,7 +18,7 @@ pages:
 - Projects:
     - Documentation: projects/documentation.md
 
-theme: 'cinder'
+theme: 'material'
 
 markdown_extensions:
   - pymdownx.highlight
