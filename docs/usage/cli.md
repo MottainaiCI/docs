@@ -286,7 +286,7 @@ Use " storage [command] --help" for more information about a command.
 
 Create a storage:
 
-    mottainai-cli storage create <name>
+    mottainai-cli storage create <id>
 
 To default, normal users have access only to namespaces which prefix with their username (e.g. *user::foo*).
 
@@ -296,19 +296,19 @@ Administrators or Managers aren't subject to such restriction.
 
 Download all files in a storage
 
-    mottainai-cli storage download <name> <destination>
+    mottainai-cli storage download <id> <destination>
 
 ### Upload
 
 Upload a file in a storage, note destination is in absolute form in respect of the storage content (e.g. */* to push to the root of namespace):
 
-    mottainai-cli storage upload <name> <file> <destination>
+    mottainai-cli storage upload <id> <file> <destination>
 
 ### Delete
 
 Delete storage (permanently):
 
-    mottainai-cli storage delete <name>
+    mottainai-cli storage delete <id>
 
 ### List
 
