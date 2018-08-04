@@ -6,7 +6,7 @@ site_url: 'https://mottainaici.github.io/docs/'
 repo_name: 'MottainaiCI/docs'
 repo_url: https://github.com/MottainaiCI/docs
 
-pages:
+nav:
 - Home: index.md
 - How it works: general.md
 - Usage:
@@ -16,7 +16,7 @@ pages:
   - Namespaces: usage/namespace.md
   - Storages: usage/storage.md
 
-theme: 'material'
+#theme: 'material'
 
 markdown_extensions:
   - pymdownx.highlight
