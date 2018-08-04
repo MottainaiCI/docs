@@ -45,7 +45,6 @@ Use " [command] --help" for more information about a command.
 **Note:** The CLI options **--master** and **--apikey** are required for every command issued to the CLI, see [how to set CLI profiles to store credentials in your machine](cli.md#profiles) to avoid typing them each time.
 In the following commands will be omitted for sake of readability, but they are required.
 
-
 ## Tasks
 
 ```
@@ -179,3 +178,140 @@ See ```mottainai-cli profile --help``` for an overview.
 To define a default profile, you can set the environment variable ```MOTTAINAI_CLI_PROFILE``` inside your .bashrc (or equivalent), in this way you can issue command directly, for example:
 
         mottainai-cli task attach <taskid>
+
+## Namespace
+
+```
+Manage namespaces
+
+Usage:
+   namespace [command]
+
+Available Commands:
+  clone       clone a namespace
+  create      Create a namespace
+  delete      Delete a namespace
+  download    Download namespace artefacts
+  list        List namespaces
+  show        Show artefacts belonging to namespace
+  tag         Tag a namespace
+  upload      Upload file to a namespace
+
+Flags:
+  -h, --help   help for namespace
+
+Global Flags:
+  -k, --apikey string    Mottainai API key (default "fb4h3bhgv4421355")
+  -m, --master string    MottainaiCI webUI URL (default "http://localhost:8080")
+  -p, --profile string   Use specific profile for call API.
+
+Use " namespace [command] --help" for more information about a command.
+```
+
+### Create
+
+Create a namespace:
+
+    mottainai-cli namespace create <name>
+
+To default, normal users have access only to namespaces which prefix with their username.
+
+Administrators or Managers aren't subject to such restriction.
+
+### Download
+
+Download all files in a namespace
+
+    mottainai-cli namespace download <name> <path>
+
+### Upload
+
+Upload a file in a namespace, note destination is in absolute form in respect of the namespace content (e.g. */* to push to the root of namespace):
+
+    mottainai-cli namespace upload <name> <file> <destination>
+
+### Delete
+
+Delete namespace (permanently):
+
+    mottainai-cli namespace delete <name>
+
+### List
+
+List all namespaces:
+
+    mottainai-cli namespace list
+
+### Clone
+
+Generate a new namespace from an old one:
+
+    mottainai-cli namespace clone <namespace>
+
+### Tag
+
+Publish task produced artefacts into a namespace:
+
+    mottainai-cli namespace tag <name> --from <taskid>
+
+
+## Storage
+
+```
+Manage storages
+
+Usage:
+   storage [command]
+
+Available Commands:
+  create      Create a storage
+  delete      Delete a storage
+  download    Download storage artefacts
+  list        List storages
+  show        Show artefacts belonging to a storage
+  upload      Upload file to a storage
+
+Flags:
+  -h, --help   help for storage
+
+Global Flags:
+  -k, --apikey string    Mottainai API key (default "fb4h3bhgv4421355")
+  -m, --master string    MottainaiCI webUI URL (default "http://localhost:8080")
+  -p, --profile string   Use specific profile for call API.
+
+Use " storage [command] --help" for more information about a command.
+```
+
+### Create
+
+Create a storage:
+
+    mottainai-cli storage create <name>
+
+To default, normal users have access only to namespaces which prefix with their username (e.g. *user::foo*).
+
+Administrators or Managers aren't subject to such restriction.
+
+### Download
+
+Download all files in a storage
+
+    mottainai-cli storage download <name> <destination>
+
+### Upload
+
+Upload a file in a storage, note destination is in absolute form in respect of the storage content (e.g. */* to push to the root of namespace):
+
+    mottainai-cli storage upload <name> <file> <destination>
+
+### Delete
+
+Delete storage (permanently):
+
+    mottainai-cli storage delete <name>
+
+### List
+
+List all storages:
+
+    mottainai-cli storage list

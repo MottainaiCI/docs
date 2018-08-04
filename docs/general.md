@@ -1,6 +1,6 @@
 # General concepts
 
-Mottainai is composed of 4 piece of software:
+Mottainai is composed of 4 main components:
 
 - Mottainai Server - central node to dispatch tasks and collect artefacts from build
 - Mottainai CLI - Application to interface with Mottainai Server
@@ -12,17 +12,17 @@ The [Server](https://github.com/MottainaiCI/mottainai-server) is the main compon
 and setup Ceph or other storage engines for permanent and distributed storage.
 
 ## Agent
-The [Agent](https://github.com/MottainaiCI/mottainai-agent) is the main software which is executing the tasks, is being run by nodes belonging to the cluster. Among its mansions, it takes care of executing the task in the specified environment and communicate to the Server the node status.
+The [Agent](https://github.com/MottainaiCI/mottainai-agent) is the main software which is executing the tasks, is being run by nodes belonging to the cluster. Among its duties, it takes care of executing the task in the specified environment and communicate to the Server the node status.
 
 ## CLI
-[Command Line Interface](https://github.com/MottainaiCI/mottainai-cli) to interact with the cluster, to manage and publish the artefacts. It's a mere wrapper over the REST API.
+[Command Line Interface](https://github.com/MottainaiCI/mottainai-cli) to interact with the cluster, to manage and publish the artefacts. It's a mere wrapper over the REST API. [See the CLI doucmentation for an overview](usage/cli.md).
 
 ## Bridge
 [Standalone/Library](https://github.com/MottainaiCI/mottainai-bridge) suitable for creating custom hooks to listen at infrastructure events (e.g. IRC notifications when a new task is created, etc. )
 
 # Tasks, Pipelines and Plans
 
-Tasks are the core concept of Mottainai. They define an environment where to execute a set of command, and they can produce content that is meant to be re-distributed later (in private, or in public). You can see a brief explanation of their syntax [here](usage/tasksandpipelines.md).
+Tasks are the core concept of Mottainai. They define an environment where to execute a set of command, and they can produce content that is meant to be re-distributed later (in private, or in public). [You can see a brief syntax overview here](usage/tasksandpipelines.md).
 
 
 # Storages, Artefacts, Namespaces
