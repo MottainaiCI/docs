@@ -3,6 +3,9 @@
 Tasks can be defined in both json or yaml, it boils down to:
 
 ```
+# Task name 
+name: "My task"
+
 # Image used by the task player
 image: "my/image"
 
@@ -10,19 +13,22 @@ image: "my/image"
 script:
   - echo "hello world"
 
-# Task type, for now only docker is available
-task: docker_execute
+# Task type
+type: docker
 ```
 
 Those are the required fields:
 
 - **image**: it's the environment where your task is going to be run
 - **script**: list of commands to execute
-- **task**: it's the task type - for now only Docker is supported
+- **type**: it's the task type ( vagrant_virtualbox, vagrant_libvirt, docker, lxd )
 
 There are more field to allow you to control better the lifespan of the task, or further define the environment. This is a full task definition:
 
 ```
+# Task name 
+name: "My task"
+
 # Image used by the task player
 image: "my/image"
 
@@ -30,8 +36,8 @@ image: "my/image"
 script:
   - echo "hello world"
 
-# Task type, for now only docker is available
-task: docker_execute
+# Task type
+type: docker
 
 # Git repository that will be the context of our build
 # The node that will execute the task will fetch the content and
@@ -134,17 +140,17 @@ tasks:
     image: sabayon/base-amd64
     script:
       - echo 'hello'
-    task: docker_execute
+    type: docker
   task2:
     image: sabayon/base-amd64
     script:
       - echo 'hello 2!'
-    task: docker_execute
+    type: docker
   task3:
     script:
       - echo 'hello 3'
       - exit 1 # Make it fail!
-    task: docker_execute
+    type: docker
 ```
 
 - **tasks** (required): A list of task definition in form ```key -> task```
@@ -168,19 +174,18 @@ tasks:
     image: sabayon/base-amd64
     script:
       - echo 'hello'
-
-    task: docker_execute
+    type: docker
   task2:
     image: sabayon/base-amd64
     script:
       - echo 'hello 2!'
       # - exit 1 If this fails, then task3 is not executed.
-    task: docker_execute
+    type: docker
   task3:
     image: sabayon/base-amd64
     script:
       - echo 'hello from 3'
-    task: docker_execute
+    type: docker
 
 ```
 As you can see the pipeline task field is a list of task that are indexed by a string. You can create keys freely and use them to define the execution order.
@@ -207,18 +212,18 @@ tasks:
     image: sabayon/base-amd64
     script:
       - echo 'hello'
-    task: docker_execute
+    type: docker
   task2:
     image: sabayon/base-amd64
     script:
       - echo 'hello world!'
       # - exit 1 If it fails, task3 is not executed
-    task: docker_execute
+    type: docker
   task3:
     image: sabayon/base-amd64
     script:
       - echo 'hello from 3'
-    task: docker_execute
+    type: docker
 ```
 
 Relevant fields not seen already:
