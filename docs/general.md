@@ -4,7 +4,7 @@ Mottainai is composed of 4 main components:
 
 - Mottainai Server - central node to dispatch tasks and collect artefacts from build
 - Mottainai CLI - Application to interface with Mottainai Server
-- Replicant - CLI Application for Mottainai cluster's status deploy
+- Replicant - CLI Application to manage an infrastructure state
 - Mottainai Agent - Runtime for nodes that are executing tasks
 - Mottainai Bridge - Suite of library/binaries to listen on events emitted by the infrastructure
 

@@ -9,3 +9,17 @@ Namespaces are accessible from the web interface:
     https://your.instance.com/namespace/<namespace>
 
 Only administrators are allowed (for now) to publish in top layer ones, standard users have access only to namespaces which prefixes with their username.
+
+## Create
+
+You can create a new namespace from the CLI with:
+
+    mottainai-cli namespace create new-namespace
+
+On the task (or pipeline) definition [you can publish the resulting artefact](tasksandpipelines.md) to the namespace by adding ```tag_namespace: new-namespace```.
+
+## Clone
+
+You can create a new namespace cloning from an old one:
+
+    mottainai-cli namespace clone --from old-namespace new-namespace
