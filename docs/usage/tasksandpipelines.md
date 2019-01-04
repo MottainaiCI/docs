@@ -3,7 +3,7 @@
 Tasks can be defined in both json or yaml, it boils down to:
 
 ```
-# Task name 
+# Task name
 name: "My task"
 
 # Image used by the task player
@@ -23,10 +23,16 @@ Those are the required fields:
 - **script**: list of commands to execute
 - **type**: it's the task type ( vagrant_virtualbox, vagrant_libvirt, docker, lxd )
 
+Once you have your task definition done, create your task into the infrastructure with:
+
+    mottainai-cli task create --yaml task.yaml
+
+If all goes as expected, you will see an url corresponding to your running task.
+
 There are more field to allow you to control better the lifespan of the task, or further define the environment. This is a full task definition:
 
 ```
-# Task name 
+# Task name
 name: "My task"
 
 # Image used by the task player
