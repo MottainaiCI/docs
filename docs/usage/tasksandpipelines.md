@@ -164,6 +164,10 @@ tasks:
 - **pipeline_name** (required): Name of the pipeline
 - **concurrency** (optional): Number of parallel builds
 
+To run the pipeline, use the CLI as usual:
+
+    mottainai-cli pipeline create --yaml task.yaml
+
 ## Chains
 
 Chains are sequences of task, each one is started only if the predecessor in the chain succeeded.
