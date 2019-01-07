@@ -7,7 +7,7 @@ Mottainai is a Task Distributed, Continous Integration and Delivery system - it 
 content built from custom tasks from different nodes in a network. You can hook specific tasks to Git repositories in a CI style, or
 either directly execute pipelines or production tasks in safe environments.
 
-It supports different brokering backends: AMQP, Redis, Memcache, AWS SQS, DynamoDB, MongoDB.
+It supports different brokering backends: AMQP, Redis, Memcache, AWS SQS, DynamoDB, Google Pub/Sub and MongoDB.
 
 It was developed for building and releasing packages for Linux Distributions,
 it is used by [Sabayon Linux](https://www.sabayon.org) to produce and orchestrate builds of community repositories and to build LiveCDs -
