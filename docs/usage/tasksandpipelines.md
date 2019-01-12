@@ -119,7 +119,7 @@ Most notably, all optional fields:
 - **queue**: Specify a queue where to send the task to. If you setup your nodes to listen in different queues, you can exploit it to partition your cluster based on your preferences (e.g. architecture, host capabilities, etc. )
 - **storage**: Storage ID which the task has access to - depending on the user permissions. See [Storage](storage.md) for more detail.
 - **namespace**: Namespace is a unique string (as e.g. *moo*) to drain artefacts from. Already published artefacts can be shared in such way between different tasks in different hosts. See [Namespace](namespace.md) for more detail.
-- **tag_namespace**: Namespace is a unique string (as e.g. *sheep*) where to tag task produced content automatically on success. See also [Namespace](namespace.md) for more detail.
+- **tag_namespace**: Namespace is a unique string (as e.g. *sheep*) where to tag task produced content automatically on success. See also [Namespace](namespace.md) and [Artefacts](artefacts.md) for more detail.
 
 # Pipelines
 

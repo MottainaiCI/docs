@@ -31,12 +31,13 @@ tag_namespace: 'my-bucket-name'
 
 ## Append file to the bucket
 
-By 'tagging' a namespace with the task, we actually replace the bucket content with the task artefacts, but this is not always the case.
+By 'tagging' a namespace automatically with the task, we are replacing the bucket content with the task artefacts, but this is not always the case.
 
-We can define *publish_mode* in the task definition to accomplish that:
+We can define the way we publish artefacts to the bucket specifying *publish_mode* in the task definition, e.g. to append file to the bucket just set it to *append*:
 
 ```
-# Specify artefacts publishing mode on namespaces. by default it replace namespace content during tag. # - append: Do not replace namespace content, append to existing one 
+# Specify artefacts publishing mode on namespaces. by default it replace namespace content during tag. 
+# - append: Do not replace namespace content, append artefacts to existing ones 
 publish_mode: "append"
 ```
 
