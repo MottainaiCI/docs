@@ -4,7 +4,7 @@ In Mottainai, tasks can optionally produce *Artefacts* that you can later refere
 
 In a task definition, you can specify to tag automatically on success into a namespace by setting *tag_namespace*:
 
-```
+```yaml
 # Create an empty file as artefact
 
 script:
@@ -21,7 +21,7 @@ artefact_path: out
 
 And use it like this in our script definition:
 
-```
+```yaml
 script:
 - touch out/hello.txt
 
@@ -35,9 +35,9 @@ By 'tagging' a namespace automatically with the task, we are replacing the bucke
 
 We can define the way we publish artefacts to the bucket specifying *publish_mode* in the task definition, e.g. to append file to the bucket just set it to *append*:
 
-```
-# Specify artefacts publishing mode on namespaces. by default it replace namespace content during tag. 
-# - append: Do not replace namespace content, append artefacts to existing ones 
+```yaml
+# Specify artefacts publishing mode on namespaces. by default it replace namespace content during tag.
+# - append: Do not replace namespace content, append artefacts to existing ones
 publish_mode: "append"
 ```
 
@@ -45,7 +45,7 @@ publish_mode: "append"
 
 To retrieve data during our task execution instead, specify *namespace* in the task definition:
 
-```
+```yaml
 script:
 - ls artefacts/hello.*
 namespace: 'some-bucket'
@@ -57,14 +57,10 @@ In this way, we can retrieve the same data belonging to the bucket, allowing to 
 
 Using the [CLI](cli.md) it's possible to tag tasks artefacts into new namespaces and also merging and replacing their content.
 
-Use the task id which you want to use as a source for the namespace content, e.g. 
+Use the task id which you want to use as a source for the namespace content, e.g.
 
-```
+```yaml
 mottainai-cli namespace tag some-bucket --from 123456
 ```
 
 Will tag the artefacts produced by *123456* into the *some-bucket* namespace.
-
-
-
-

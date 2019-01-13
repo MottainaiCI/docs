@@ -19,7 +19,7 @@ In the task definition, annotate the ID in the ```storage``` field. Inside the t
 in the ```storage/``` directory relative to your task execution, e.g.:
 
 
-```
+```yaml
 script:
   - ls storage/
   - source storage/.secrets.env
@@ -40,7 +40,7 @@ The ``ID`` is the identifier of the storage, ``file_to_upload`` is the path of t
 
 In the task which is referencing it, hello_world.txt now is accessible:
 
-```
+```yaml
 script:
   - ls storage/
   - cat storage/hello_world.txt

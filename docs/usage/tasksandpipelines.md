@@ -2,7 +2,7 @@
 
 Tasks can be defined in both json or yaml, it boils down to:
 
-```
+```yaml
 # Task name
 name: "My task"
 
@@ -31,7 +31,7 @@ If all goes as expected, you will see an url corresponding to your running task.
 
 There are more field to allow you to control better the lifespan of the task, or further define the environment. This is a full task definition:
 
-```
+```yaml
 # Task name
 name: "My task"
 

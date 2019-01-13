@@ -1,6 +1,7 @@
 # Command Line Interface
 
 You can use the command line interface to create, track and manage your cluster.
+
 ```
 Mottainai CLI
 Copyright (c) 2017-2018 Mottainai
