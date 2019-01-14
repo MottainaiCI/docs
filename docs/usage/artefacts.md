@@ -64,3 +64,15 @@ mottainai-cli namespace tag some-bucket --from 123456
 ```
 
 Will tag the artefacts produced by *123456* into the *some-bucket* namespace.
+
+## Append task artefacts to a namespace
+
+In the same way as tagging, it's possible to append tasks artefacts into existing namespaces.
+
+Use the task id which you want to use as a source for the namespace content, e.g.
+
+```yaml
+mottainai-cli namespace append some-bucket --from 123456
+```
+
+Will append the artefacts produced by *123456* into the *some-bucket* namespace.

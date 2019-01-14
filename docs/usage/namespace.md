@@ -23,3 +23,20 @@ On the task (or pipeline) definition [you can publish the resulting artefact](ta
 You can create a new namespace cloning from an old one:
 
     mottainai-cli namespace clone --from old-namespace new-namespace
+
+## Delete
+
+You can delete a namespace from the CLI with:
+
+    mottainai-cli namespace delete some-namespace
+
+## Remove
+
+You can remove files from a namespace from the CLI with:
+
+    mottainai-cli namespace remove some-namespace /path/to/file
+
+
+e.g. if the *foobar* namespace have a file at the top level called 'hello.txt', you can remove it with:
+
+    mottainai-cli namespace remove foobar /hello.txt
