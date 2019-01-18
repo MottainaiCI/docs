@@ -16,7 +16,7 @@ nav:
   - Namespaces: usage/namespace.md
   - Storages: usage/storage.md
 
-#theme: 'material'
+theme: 'material'
 
 markdown_extensions:
   - pymdownx.highlight
