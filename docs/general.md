@@ -19,7 +19,7 @@ The [Agent](https://github.com/MottainaiCI/mottainai-agent) is the main software
 [Command Line Interface](https://github.com/MottainaiCI/mottainai-cli) to interact with the cluster, to manage and publish the artefacts. It's a mere wrapper over the REST API. [See the CLI doucumentation for an overview](usage/cli.md).
 
 ## Replicant
-Operator that with the usage of a control repository (e.g. hosted on Github) deploys and maintain the infrastructure state [Source](https://github.com/MottainaiCI/replicator).
+Operator that with the usage of a control repository (e.g. hosted on Github) deploys and maintain the infrastructure state [Source](https://github.com/MottainaiCI/replicant).
 
 ## Bridge
 [Standalone/Library](https://github.com/MottainaiCI/mottainai-bridge) suitable for creating custom hooks to listen at infrastructure events (e.g. IRC notifications when a new task is created, operators, etc. )
