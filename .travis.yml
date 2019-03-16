@@ -4,6 +4,8 @@ install:
 - pip install mkdocs-material
 - pip install mkdocs-cinder
 - pip install pymdown-extensions
+- pip install pygments
+
 script:
 - mkdocs build --verbose --clean
 deploy:

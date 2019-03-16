@@ -17,7 +17,19 @@ nav:
   - Namespaces: usage/namespace.md
   - Storages: usage/storage.md
 
-theme: 'material'
+theme:
+  name: 'material'
+  logo: 'images/logo.png'
+  palette:
+    primary: 'cyan'
+    accent: 'cyan'
 
 markdown_extensions:
-  - pymdownx.highlight
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+repo_name: 'MottainaiCI/mottainai-server'
+repo_url: 'https://github.com/MottainaiCI/mottainai-server'
