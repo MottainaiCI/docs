@@ -12,6 +12,7 @@ nav:
 - Usage:
   - Cli: usage/cli.md
   - 'Tasks and Pipelines': usage/tasksandpipelines.md
+  - Plans: usage/plans.md
   - Artefacts: usage/artefacts.md
   - Namespaces: usage/namespace.md
   - Storages: usage/storage.md
