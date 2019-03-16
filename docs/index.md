@@ -22,4 +22,5 @@ First steps to start to build!
 
 - [How it works?](general.md)
 - [Tasks and pipelines](usage/tasksandpipelines.md)
+- [Plans](usage/plans.md)
 - [Powerful CLI to the rescue!](usage/cli.md)
