@@ -1,0 +1,719 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for Mottainai">
+      
+      
+        <link rel="canonical" href="https://mottainaici.github.io/docs/usage/tasksandpipelines/">
+      
+      
+        <meta name="author" content="Mottainai">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Tasks and Pipelines - Mottainai docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#tasks" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://mottainaici.github.io/docs/" title="Mottainai docs" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Mottainai docs
+            </span>
+            <span class="md-header-nav__topic">
+              Tasks and Pipelines
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/MottainaiCI/mottainai-server/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    MottainaiCI/mottainai-server
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://mottainaici.github.io/docs/" title="Mottainai docs" class="md-nav__button md-logo">
+      
+        <img src="../../images/logo.png" width="48" height="48">
+      
+    </a>
+    Mottainai docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/MottainaiCI/mottainai-server/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    MottainaiCI/mottainai-server
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../general/" title="How it works" class="md-nav__link">
+      How it works
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../setup/" title="Setup" class="md-nav__link">
+      Setup
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Usage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Usage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/" title="Cli" class="md-nav__link">
+      Cli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Tasks and Pipelines" class="md-nav__link md-nav__link--active">
+      Tasks and Pipelines
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plans/" title="Plans" class="md-nav__link">
+      Plans
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../artefacts/" title="Artefacts" class="md-nav__link">
+      Artefacts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../namespace/" title="Namespaces" class="md-nav__link">
+      Namespaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../storage/" title="Storages" class="md-nav__link">
+      Storages
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/MottainaiCI/mottainai-server/edit/master/docs/usage/tasksandpipelines.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h1>
+<p>Tasks can be defined in both json or yaml, it boils down to:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Task name</span>
+<span class="nt">name</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">task&quot;</span>
+
+<span class="c1"># Image used by the task player</span>
+<span class="nt">image</span><span class="p">:</span> <span class="s">&quot;my/image&quot;</span>
+
+<span class="c1"># Script to be executed</span>
+<span class="nt">script</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;hello world&quot;</span>
+
+<span class="c1"># Task type</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+</pre></div>
+
+
+<p>Those are the required fields:</p>
+<ul>
+<li><strong>image</strong>: it's the environment where your task is going to be run</li>
+<li><strong>script</strong>: list of commands to execute</li>
+<li><strong>type</strong>: it's the task type ( vagrant_virtualbox, vagrant_libvirt, docker, lxd )</li>
+</ul>
+<p>Once you have your task definition done, create your task into the infrastructure with:</p>
+<div class="codehilite"><pre><span></span>$&gt; mottainai-cli task create --yaml task.yaml
+</pre></div>
+
+
+<p>If all goes as expected, you will see an url corresponding to your running task.</p>
+<p>There are more field to allow you to control better the lifespan of the task, or further define the environment. This is a full task definition:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Task name</span>
+<span class="nt">name</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">task&quot;</span>
+
+<span class="c1"># Image used by the task player</span>
+<span class="nt">image</span><span class="p">:</span> <span class="s">&quot;my/image&quot;</span>
+
+<span class="c1"># Script to be executed</span>
+<span class="nt">script</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;hello world&quot;</span>
+
+<span class="c1"># Task type</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+
+<span class="c1"># Git repository that will be the context of our build</span>
+<span class="c1"># The node that will execute the task will fetch the content and</span>
+<span class="c1"># executes the commands provided</span>
+<span class="nt">source</span><span class="p">:</span> <span class="s">&#39;https://github.com/user/repo&#39;</span>
+
+<span class="c1"># Path relative to the git repository in which the commands will be executed into</span>
+<span class="nt">directory</span><span class="p">:</span> <span class="s">&#39;/dir/&#39;</span>
+
+<span class="c1"># List of path to map inside the build environment from the host</span>
+<span class="nt">binds</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/dev/loop-control:/dev/loop-control</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/test</span>
+
+<span class="c1"># Set to yes or any value to cache the image used to run the task, otherwise omit</span>
+<span class="nt">cache_image</span><span class="p">:</span> <span class="s">&quot;yes&quot;</span>
+
+<span class="c1"># Set to yes or any value to wipe the cache for the task, otherwise omit</span>
+<span class="nt">cache_clean</span><span class="p">:</span> <span class="s">&quot;yes&quot;</span>
+
+<span class="c1"># Custom image entrypoint ( first executed binary, defaults to /bin/bash )</span>
+<span class="nt">entrypoint</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">-c</span>
+
+<span class="c1"># List of variables in the build environment</span>
+<span class="nt">environment</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">FOO=42</span>
+
+<span class="c1"># Delay task execution of 800s</span>
+<span class="nt">eta</span><span class="p">:</span> <span class="s">&#39;800&#39;</span>
+
+<span class="c1"># Drain artefacts from the supplied namespace</span>
+<span class="nt">namespace</span><span class="p">:</span> <span class="s">&quot;staging:development&quot;</span>
+
+<span class="c1"># Perform pruning commands after task execution (backend dependent), omit to not execute</span>
+<span class="nt">prune</span><span class="p">:</span> <span class="s">&quot;yes&quot;</span>
+
+<span class="c1"># A specific queue where to send the task to.</span>
+<span class="nt">queue</span><span class="p">:</span> <span class="s">&quot;amd64&quot;</span>
+
+<span class="c1"># Task id where to drain artefacts from</span>
+<span class="nt">root_task</span><span class="p">:</span> <span class="s">&quot;34132345135151&quot;</span>
+
+<span class="c1"># Task associated storage</span>
+<span class="nt">storage</span><span class="p">:</span> <span class="s">&quot;8925468933589065900&quot;</span>
+
+<span class="c1"># relative path for drained storages (defaults storage)</span>
+<span class="nt">storage_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">storage</span>
+
+<span class="c1"># relative path for drained artefacts from namespace/root_task (defaults artefacts)</span>
+<span class="nt">artefact_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">artefacts</span>
+
+<span class="c1"># On success, tag task&#39;s produced artefacts into a namespace (create if doesn&#39;t exists)</span>
+<span class="nt">tag_namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">staging:iso</span>
+
+<span class="c1"># Specify artefacts publishing mode on namespaces. by default it replace namespace content during tag.</span>
+<span class="c1"># - append: Do not replace namespace content, append to existing one</span>
+<span class="nt">publish_mode</span><span class="p">:</span> <span class="s">&quot;append&quot;</span>
+
+<span class="c1"># Task time limit (in seconds)</span>
+<span class="nt">timeout</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+
+<span class="c1"># Retry attempts (in case of error)</span>
+<span class="nt">retry</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</pre></div>
+
+
+<p>Most notably, all optional fields:</p>
+<ul>
+<li><strong>source</strong>: Git repository where your source code is hosted. The node will fetch it and the task commands will be executed in the cloned repository</li>
+<li><strong>directory</strong>: Define a directory inside your Git repository which will be where your sequence of commands will be executed</li>
+<li><strong>queue</strong>: Specify a queue where to send the task to. If you setup your nodes to listen in different queues, you can exploit it to partition your cluster based on your preferences (e.g. architecture, host capabilities, etc. )</li>
+<li><strong>storage</strong>: Storage ID which the task has access to - depending on the user permissions. See <a href="../storage/">Storage</a> for more detail.</li>
+<li><strong>namespace</strong>: Namespace is a unique string (as e.g. <em>moo</em>) to drain artefacts from. Already published artefacts can be shared in such way between different tasks in different hosts. See <a href="../namespace/">Namespace</a> for more detail.</li>
+<li><strong>tag_namespace</strong>: Namespace is a unique string (as e.g. <em>sheep</em>) where to tag task produced content automatically on success. See also <a href="../namespace/">Namespace</a> and <a href="../artefacts/">Artefacts</a> for more detail.</li>
+</ul>
+<h1 id="pipelines">Pipelines<a class="headerlink" href="#pipelines" title="Permanent link">&para;</a></h1>
+<p>In order to automate furthermore your infrastructure, it's possible to define pipelines of tasks.
+Tasks can be chained together to e.g. pass-by artifacts between each other, and if one of them fails, the chain is interrupted.
+There are 3 kinds of pipelines: Groups, Chains and Chords.</p>
+<h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h2>
+<p>A group of task is a parallel group that is meant to run together.</p>
+<div class="codehilite"><pre><span></span><span class="nt">pipeline_name</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">Pipeline&quot;</span>
+<span class="nt">concurrency</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span> <span class="c1"># Number of parallel builds</span>
+<span class="nt">group</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;task1&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;task2&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;task3&quot;</span>
+
+<span class="nt">queue</span><span class="p">:</span> <span class="s">&#39;general&#39;</span> <span class="c1"># Optional, force the pipeline to a specific queue</span>
+
+<span class="nt">tasks</span><span class="p">:</span>
+  <span class="nt">task1</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sabayon/base-amd64</span>
+    <span class="nt">script</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello&#39;</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+  <span class="nt">task2</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sabayon/base-amd64</span>
+    <span class="nt">script</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello 2!&#39;</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+  <span class="nt">task3</span><span class="p">:</span>
+    <span class="nt">script</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello 3&#39;</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">exit 1</span> <span class="c1"># Make it fail!</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+</pre></div>
+
+
+<ul>
+<li><strong>tasks</strong> (required): A list of task definition in form <code>key -&gt; task</code></li>
+<li><strong>group</strong> (required): A list of task keys that are refering to the task definition</li>
+<li><strong>pipeline_name</strong> (required): Name of the pipeline</li>
+<li><strong>concurrency</strong> (optional): Number of parallel builds</li>
+</ul>
+<p>To run the pipeline, use the CLI as usual:</p>
+<div class="codehilite"><pre><span></span>$&gt; mottainai-cli pipeline create --yaml task.yaml
+</pre></div>
+
+
+<h2 id="chains">Chains<a class="headerlink" href="#chains" title="Permanent link">&para;</a></h2>
+<p>Chains are sequences of task, each one is started only if the predecessor in the chain succeeded.</p>
+<div class="codehilite"><pre><span></span><span class="nt">pipeline_name</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">Pipeline&quot;</span>
+<span class="nt">chain</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;task&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;task2&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;task3&quot;</span>
+
+<span class="nt">tasks</span><span class="p">:</span>
+  <span class="nt">test</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sabayon/base-amd64</span>
+    <span class="nt">script</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello&#39;</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+  <span class="nt">task2</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sabayon/base-amd64</span>
+    <span class="nt">script</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello 2!&#39;</span>
+      <span class="c1"># - exit 1 If this fails, then task3 is not executed.</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+  <span class="nt">task3</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sabayon/base-amd64</span>
+    <span class="nt">script</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello from 3&#39;</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+</pre></div>
+
+
+<p>As you can see the pipeline task field is a list of task that are indexed by a string. You can create keys freely and use them to define the execution order.</p>
+<p>Relevant fields not seen already:</p>
+<ul>
+<li><strong>group</strong> (required): A list of task keys that are refering to the task definition</li>
+</ul>
+<h2 id="chords">Chords<a class="headerlink" href="#chords" title="Permanent link">&para;</a></h2>
+<p>Execute a callback after a group ends successfully:</p>
+<div class="codehilite"><pre><span></span><span class="nt">pipeline_name</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">Pipeline&quot;</span>
+
+<span class="nt">group</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;task1&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;task2&quot;</span>
+<span class="nt">chord</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;task3&quot;</span>
+
+<span class="nt">tasks</span><span class="p">:</span>
+  <span class="nt">task1</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sabayon/base-amd64</span>
+    <span class="nt">script</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello&#39;</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+  <span class="nt">task2</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sabayon/base-amd64</span>
+    <span class="nt">script</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello world!&#39;</span>
+      <span class="c1"># - exit 1 If it fails, task3 is not executed</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+  <span class="nt">task3</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sabayon/base-amd64</span>
+    <span class="nt">script</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello from 3&#39;</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+</pre></div>
+
+
+<p>Relevant fields not seen already:</p>
+<ul>
+<li><strong>chord</strong>: A list of task executed if chord is successfull (currently, just one callback is supported)</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../cli/" title="Cli" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Cli
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../plans/" title="Plans" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Plans
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
