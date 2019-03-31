@@ -25,7 +25,7 @@ Those are the required fields:
 
 Once you have your task definition done, create your task into the infrastructure with:
 
-    mottainai-cli task create --yaml task.yaml
+    $> mottainai-cli task create --yaml task.yaml
 
 If all goes as expected, you will see an url corresponding to your running task.
 
@@ -166,7 +166,7 @@ tasks:
 
 To run the pipeline, use the CLI as usual:
 
-    mottainai-cli pipeline create --yaml task.yaml
+    $> mottainai-cli pipeline create --yaml task.yaml
 
 ## Chains
 

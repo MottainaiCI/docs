@@ -86,46 +86,46 @@ Use " task [command] --help" for more information about a command.
 After [defining a task](tasksandpipelines.md) inside a yaml or json file you can use the CLI to create tasks and pipelines to be executed remotely
 by the nodes belonging to your cluster.
 
-    mottainai-cli task create --yaml file.yaml
+    $> mottainai-cli task create --yaml file.yaml
 
 ### Attach
 
 Once the task is created, the CLI will return an ID and instructions on how to interact with it.
 If you want to see the logs of a running task and see updates, run:
 
-    mottainai-cli task attach <taskid>
+    $> mottainai-cli task attach #taskid
 
 
 ### Stop
 
 To stop a running task:
 
-    mottainai-cli task stop <taskid>
+    $> mottainai-cli task stop #taskid
 
 ### Remove
 
 To remove a task, and its associated artefacts:
 
-    mottainai-cli task remove <taskid>
+    $> mottainai-cli task remove #taskid
 
 
 ### Monitor
 
 Wait for tasks to complete, and propagate error to the console :
 
-    mottainai-cli task monitor <taskid> <taskid2> <taskid3> ...
+    $> mottainai-cli task monitor #taskid #taskid2 #taskid3 ...
 
 ### Log
 
 Get task current log:
 
-    mottainai-cli task log <taskid>
+    $> mottainai-cli task log #taskid
 
 ### Download
 
 You can download a task artefacts with the CLI:
 
-    mottainai-cli task download <id> <destination>
+    mottainai-cli task download #taskid /my/download/folder
 
 
 ### List
@@ -138,7 +138,7 @@ List all tasks:
 
 Generate a new task from an old one:
 
-    mottainai-cli task clone <id>
+    mottainai-cli task clone #taskid
 
 ## Profiles
 
@@ -168,17 +168,17 @@ Profiles can be used to store permanently options that CLI uses to connect and a
 
 To create a new profile:
 
-    mottainai-cli profile create <name> <instanceurl> <apikey>
+    $> mottainai-cli profile create #profilename #APIurl #APIkey
 
 Later, when you are using the cli you can specify
 
-    mottainai-cli --profile <name> commmands...
+    $> mottainai-cli --profile #profilename commmands...
 
-See ```mottainai-cli profile --help``` for an overview.
+See ```mottainai-cli profile --help```  for an overview.
 
 To define a default profile, you can set the environment variable ```MOTTAINAI_CLI_PROFILE``` inside your .bashrc (or equivalent), in this way you can issue command directly, for example:
 
-        mottainai-cli task attach <taskid>
+    $> mottainai-cli task attach #taskid
 
 ## Namespace
 
@@ -213,7 +213,7 @@ Use " namespace [command] --help" for more information about a command.
 
 Create a namespace:
 
-    mottainai-cli namespace create <name>
+    $> mottainai-cli namespace create #name
 
 To default, normal users have access only to namespaces which prefix with their username.
 
@@ -223,37 +223,37 @@ Administrators or Managers aren't subject to such restriction.
 
 Download all files in a namespace
 
-    mottainai-cli namespace download <name> <path>
+    $> mottainai-cli namespace download #name /my/download/path
 
 ### Upload
 
 Upload a file in a namespace, note destination is in absolute form in respect of the namespace content (e.g. */* to push to the root of namespace):
 
-    mottainai-cli namespace upload <name> <file> <destination>
+    $> mottainai-cli namespace upload #namespace #file subfolder/
 
 ### Delete
 
 Delete namespace (permanently):
 
-    mottainai-cli namespace delete <name>
+    $> mottainai-cli namespace delete #name
 
 ### List
 
 List all namespaces:
 
-    mottainai-cli namespace list
+    $> mottainai-cli namespace list
 
 ### Clone
 
 Generate a new namespace from an old one:
 
-    mottainai-cli namespace clone <namespace>
+    $> mottainai-cli namespace clone #name #newname
 
 ### Tag
 
 Publish task produced artefacts into a namespace:
 
-    mottainai-cli namespace tag <name> --from <taskid>
+    $> mottainai-cli namespace tag #name --from #taskid
 
 
 ## Storage
@@ -287,7 +287,7 @@ Use " storage [command] --help" for more information about a command.
 
 Create a storage:
 
-    mottainai-cli storage create <id>
+    $> mottainai-cli storage create #name
 
 To default, normal users have access only to namespaces which prefix with their username (e.g. *user::foo*).
 
@@ -297,22 +297,22 @@ Administrators or Managers aren't subject to such restriction.
 
 Download all files in a storage
 
-    mottainai-cli storage download <id> <destination>
+    $> mottainai-cli storage download #storageid /my/download/path
 
 ### Upload
 
 Upload a file in a storage, note destination is in absolute form in respect of the storage content (e.g. */* to push to the root of namespace):
 
-    mottainai-cli storage upload <id> <file> <destination>
+    $> mottainai-cli storage upload #storageid #file subpath/
 
 ### Delete
 
 Delete storage (permanently):
 
-    mottainai-cli storage delete <id>
+    $> mottainai-cli storage delete #storageid
 
 ### List
 
 List all storages:
 
-    mottainai-cli storage list
+    $> mottainai-cli storage list
