@@ -9,6 +9,7 @@ repo_url: https://github.com/MottainaiCI/docs
 nav:
 - Home: index.md
 - How it works: general.md
+- Setup: setup.md
 - Usage:
   - Cli: usage/cli.md
   - 'Tasks and Pipelines': usage/tasksandpipelines.md

@@ -21,6 +21,7 @@ For more, see also the [Official Gentoo project page](https://wiki.gentoo.org/wi
 First steps to start to build!
 
 - [How it works?](general.md)
+- [Setup](setup.md)
 - [Tasks and pipelines](usage/tasksandpipelines.md)
 - [Plans](usage/plans.md)
 - [Powerful CLI to the rescue!](usage/cli.md)
