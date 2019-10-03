@@ -16,7 +16,7 @@ and setup Ceph or other storage engines for permanent and distributed storage.
 The [Agent](https://github.com/MottainaiCI/mottainai-agent) is the main software which is executing the tasks, is being run by nodes belonging to the cluster. Among its duties, it takes care of executing the task in the specified environment and communicate to the Server the node status.
 
 ## CLI
-[Command Line Interface](https://github.com/MottainaiCI/mottainai-cli) to interact with the cluster, to manage and publish the artefacts. It's a mere wrapper over the REST API. [See the CLI doucumentation for an overview](usage/cli.md).
+[Command Line Interface](https://github.com/MottainaiCI/mottainai-cli) to interact with the cluster, to manage and publish the artefacts. It's a mere wrapper over the REST API. [See the CLI documentation for an overview](usage/cli.md).
 
 ## Replicant
 Operator that with the usage of a control repository (e.g. hosted on Github) deploys and maintain the infrastructure state [Source](https://github.com/MottainaiCI/replicant).
