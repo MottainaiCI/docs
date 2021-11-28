@@ -16,6 +16,10 @@ For more, see also the [Official Gentoo project page](https://wiki.gentoo.org/wi
 
 *Warning*: This is still alpha software - API is not stable and subject to constant changes still.
 
+# Community Channel
+
+Official [Mottainai](https://join.slack.com/t/mottainaici/shared_invite/zt-zdmrc651-IvxE9j~TT5ssv_CVo51uZg) Slack channel.
+
 # Getting started
 
 First steps to start to build!
